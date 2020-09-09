@@ -1,0 +1,12 @@
+.item{
+    background-color: whitesmoke !important;
+    box-shadow: none !important;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item > h2{
+    font-size: 40px;
+}
