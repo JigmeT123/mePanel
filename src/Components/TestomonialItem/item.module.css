@@ -8,5 +8,16 @@
     align-items: center;
 }
 .item > h2{
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: 200;
+}
+.item > p {
+    width: 60%;
+    text-align: center;
+    height: max-content;
+    font-family: sans-serif;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
 }

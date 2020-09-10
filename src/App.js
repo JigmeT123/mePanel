@@ -3,6 +3,7 @@ import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Services from './Components/Services/Service';
+import Footer from './Components/footer/Footer';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                     <Route path="/about" component={About}/>
                     <Route path="/services" component={Services}/>
                 </Switch>
+                <Footer />
 
             </div>
         </Router>
