@@ -9,7 +9,7 @@ const About = () => {
         <div className={styles.about}>
             <div className={styles.home__imgContainer}>
                 <div className={styles.home__info}>
-                    <h1>GET AUDIENCE, GROW BIG!</h1>
+                    <h1>ABOUT</h1>
                     <h3>DIGITAL MARKETING & PROMOTION</h3>
                     <Link to="/service">
                         <Button>Let's Talk Digital</Button>

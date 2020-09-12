@@ -1,0 +1,26 @@
+.socialItem{
+    width: 22%;
+    height: 450px;
+    background-color: whitesmoke !important;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.socialItem__Logo{
+    margin-top: 20px !important;
+    width: 100% !important;
+    height: 100px !important;
+}
+.socialItem__typo{
+    text-align: center !important;
+}
+.mixedInsta{
+    color: rgb(218, 59, 59);
+}
+.blueFacebook{
+    color: #2D88FF;
+}
+.redInsta{
+    color: #c00;
+}

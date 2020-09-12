@@ -4,13 +4,12 @@ import {Button} from '@material-ui/core';
 import Carousel from 'react-material-ui-carousel';
 import Item from '../TestomonialItem/Item';
 import PartnerCompany from '../partnerCompany/PartnerCompany';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
 
 const Home = () => {
-    var items = [
+    let items = [
         {
             name: "Tshering Dorji",
             description: "In the begining of 2020 I started with BhutanMePanel in order to raise brand a" +

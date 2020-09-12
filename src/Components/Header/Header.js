@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 
 const Header = () => {
     const [handleShow, setHandleShow] = useState(false);
-
     useEffect(()=>{
         window.addEventListener('scroll', ()=> {
             if(window.scrollY > 350){
