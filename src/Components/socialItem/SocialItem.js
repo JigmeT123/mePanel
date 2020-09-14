@@ -25,21 +25,21 @@ const SocialItem = ({
                     className={`${styles.socialItem__Logo} ${mixed && styles.mixedInsta} ${blue && styles.blueFacebook} ${twitterBlue && styles.twitterBlue} ${red && styles.redInsta} ${black && styles.black} ${Soundcloud && styles.Soundcloud}`}/>
 
                 <div className={styles.desc}>
-                    <h6>{title1}</h6>
+                    <h6><strong>{title1}</strong></h6>
                     {
                         item1 !== undefined && item1.map(
                             itm => <li><strong>{itm.price}</strong> 
                                 {itm.desc}</li>
                         )
                     }
-                    <h6>{title2}</h6>
+                    <h6><strong>{title2}</strong></h6>
                     {
                         item2 !== undefined && item2.map(
                             itm => <li><strong>{itm.price}</strong> 
                                 {itm.desc}</li>
                         )
                     }
-                     <h6>{title3}</h6>
+                     <h6><strong>{title3}</strong></h6>
                     {
                         item3 !== undefined && item3.map(
                             itm => <li><strong>{itm.price}</strong> {itm.desc}</li>

@@ -4,7 +4,9 @@ import SocialItem from '../socialItem/SocialItem';
 import {Link} from 'react-router-dom';
 import {Button} from '@material-ui/core';
 import {Instagram, Facebook, YouTube, Twitter} from '@material-ui/icons';
-import {SiTiktok, ImSoundcloud, SiNetflix} from 'react-icons/all';
+import {SiTiktok, ImSoundcloud, SiNetflix, AiFillAmazonCircle, FaSpotify} from 'react-icons/all';
+import PremiumItem from '../premium/PremiumItem';
+
 const Service = () => {
     let insta = {
         title1: "Instagram premium followers",
@@ -340,6 +342,22 @@ const Service = () => {
             }
         ]
     }
+    let spotify = {
+        data: [
+            {
+                price: "Nu  490/-",
+                desc: "Spotify premium private one month"
+            }
+        ]
+    }
+    let amazon = {
+        data: [
+            {
+                price: "Nu 350/-",
+                desc: "Amazon prime video one month subscription"
+            }
+        ]
+    }
     let soundcloud = {
         title1: "SoundCloud song plays",
         title2: "Sound cloud song likes",
@@ -474,33 +492,25 @@ const Service = () => {
                     title3={soundcloud.title3}/>
             </div>
             <div className={styles.service__content1}>
-            <SocialItem
-                    className={styles.jabarjasti}
+            <PremiumItem
                     Icon={SiNetflix}
                     title="Netflix"
                     red
                     item1={netflix.data}
                     />
-                    <SocialItem
-                    Icon={Twitter}
-                    title="Twitter"
-                    twitterBlue
-                    item1={twitter.data1}
-                    item2={twitter.data2}
-                    item3={twitter.data3}
-                    title1={twitter.title1}
-                    title2={twitter.title2} 
-                    title3={twitter.title3}/>
-                    <SocialItem
-                    Icon={ImSoundcloud}
-                    title="SoundCloud"
-                    Soundcloud
-                    item1={soundcloud.data1}
-                    item2={soundcloud.data2}
-                    item3={soundcloud.data3}
-                    title1={soundcloud.title1}
-                    title2={soundcloud.title2} 
-                    title3={soundcloud.title3}/>
+                     <PremiumItem
+                    Icon={AiFillAmazonCircle}
+                    title="Amazon Prime Video"
+                    orange
+                    item1={amazon.data}
+                    />
+                     <PremiumItem
+                    Icon={FaSpotify}
+                    title="Spotify"
+                    green
+                    item1={spotify.data}
+                    />
+                   
             </div>
         </div>
     )
