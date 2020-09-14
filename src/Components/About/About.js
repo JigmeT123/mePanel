@@ -11,7 +11,7 @@ const About = () => {
                 <div className={styles.home__info}>
                     <h1>ABOUT</h1>
                     <h3>DIGITAL MARKETING & PROMOTION</h3>
-                    <Link to="/service">
+                    <Link to="/services">
                         <Button>Let's Talk Digital</Button>
                     </Link>
                 </div>

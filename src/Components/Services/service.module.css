@@ -59,10 +59,8 @@
     transform: rotate(2.2deg);
 }
 
-.service__content{
+
+.service__content1{
     width: 100%;
-    height: 600px;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }

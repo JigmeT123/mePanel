@@ -38,7 +38,7 @@ const Home = () => {
                 <div className={styles.home__info}>
                     <h1>GET AUDIENCE, GROW BIG!</h1>
                     <h3>DIGITAL MARKETING & PROMOTION</h3>
-                    <Link to="/service"><Button>Let's Talk Digital</Button></Link>
+                    <Link to="/services"><Button>Let's Talk Digital</Button></Link>
                 </div>
                 <div className={styles.home__diagonal}></div>
             </div>
