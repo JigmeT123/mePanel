@@ -420,9 +420,7 @@ const Service = () => {
                 <div className={styles.home__info}>
                     <h1>SERVICES</h1>
                     <h3>DIGITAL MARKETING & PROMOTION</h3>
-                    <Link to="/service">
-                        <Button>Let's Talk Digital</Button>
-                    </Link>
+                   
                 </div>
                 <div className={styles.home__diagonal}></div>
             </div>

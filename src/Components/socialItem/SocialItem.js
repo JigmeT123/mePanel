@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './social.module.css';
+import {Link} from 'react-router-dom'
 import {Button, Typography, CardContent, CardActions, Card} from '@material-ui/core'
 const SocialItem = ({
     Icon,
@@ -48,7 +49,7 @@ const SocialItem = ({
                 </div>
             </CardContent>
             <CardActions  className={`${styles.card_btn} ${mixed && styles.card1} ${blue && styles.card2} ${red && styles.card3} ${black && styles.card4}  ${twitterBlue && styles.card5} ${Soundcloud && styles.card6}`}>
-                <Button>Order</Button>
+            <Link to="/payment"><Button>Order</Button></Link> 
             </CardActions>
         </Card>
     )

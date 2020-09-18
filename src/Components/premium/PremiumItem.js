@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './premium.module.css';
+import {Link} from 'react-router-dom'
 import {Button, Typography, CardContent, CardActions, Card} from '@material-ui/core'
 const PremiumItem = ({title, Icon, red, item1, orange, green}) => {
     return (
@@ -20,7 +21,7 @@ const PremiumItem = ({title, Icon, red, item1, orange, green}) => {
             </div>
         </CardContent>
         <CardActions  className={`${styles.card_btn} ${red && styles.card1} ${orange && styles.card2} ${green && styles.card3}`}>
-            <Button>Order</Button>
+            <Link to="/payment"><Button>Order</Button></Link>
         </CardActions>
     </Card>
     )
