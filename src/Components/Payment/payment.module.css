@@ -1,5 +1,5 @@
 .payment{
-    height: 800px;
+    height: 930px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,4 +20,15 @@ form{
 .btn {
     background-color: red !important;
     color: white !important; 
+}
+.boxInfo{
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 18px rgb(156, 156, 156);
+    display: flex;
+    padding: 10px;
+   align-items: left;
+   flex-direction: column;
+   margin-bottom: 20px;
+   width: 100%;
+    
 }

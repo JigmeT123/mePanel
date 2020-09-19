@@ -6,7 +6,8 @@ import {
     InputLabel,
     Select,
     MenuItem,
-    Button
+    Button,
+    FormHelperText
 } from '@material-ui/core';
 
 const Payment = () => {
@@ -28,7 +29,7 @@ const Payment = () => {
     const handleClick = e => {
         e.preventDefault();
         window.open(
-            `mailto:${email}?subject=MakingOrder&body=Name: ${firstName} ${secondName}\n\n\n\n\n Service: ${categories}\n Type: ${type}\n Count: ${type} ${count}`
+            `mailto:${email}?subject=MakingOrder&body=Name: ${secondName}|| Service: ${categories}|| Type: ${type}|| Count: ${type} ${count}|| Username: ${firstName}`
         );
     }
 
@@ -67,18 +68,9 @@ const Payment = () => {
     return (
         <div className={styles.payment}>
             <form >
-                <FormControl className={styles.formStyle}>
-                    <InputLabel htmlFor="my-input">First Name</InputLabel>
-                    <Input
-                        value={firstName}
-                        onChange={changeHandleFirstName}
-                        type="text"
-                        id="my-input"
-                        aria-describedby="my-helper-text"/>
-                </FormControl>
 
                 <FormControl className={styles.formStyle}>
-                    <InputLabel htmlFor="my-input">Last Name</InputLabel>
+                    <InputLabel htmlFor="my-input">Name</InputLabel>
                     <Input
                         value={secondName}
                         onChange={changeHandleSecondName}
@@ -109,6 +101,28 @@ const Payment = () => {
                         id="my-input"
                         aria-describedby="my-helper-text"/>
                 </FormControl>
+                <FormControl className={styles.formStyle}>
+                    <InputLabel htmlFor="my-input">User Name</InputLabel>
+                    <Input
+                        value={firstName}
+                        onChange={changeHandleFirstName}
+                        type="text"
+                        id="my-input"
+                        aria-describedby="my-helper-text"/>
+                    <FormHelperText id="my-helper-text">
+                        Please make sure to give a correct username and make your account public.</FormHelperText>
+                </FormControl>
+
+                <div className={styles.boxInfo}>
+                    <p>Please make a payment and then confirm with us through instagram: <br />
+                        <br/>
+                        BOB Account Number:<strong> 200901473</strong> 
+                        <br />Or
+                        <br/>State Bank of India: <strong>38924158570</strong>
+                        
+                        <br/>IFSC CODE
+                        <br/>SBIN0001269</p>
+                </div>
 
                 <Button onClick={handleClick} className={styles.btn}>
                     Order Now
