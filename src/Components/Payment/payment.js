@@ -114,7 +114,7 @@ const Payment = () => {
                 </FormControl>
 
                 <div className={styles.boxInfo}>
-                    <p>Please make a payment and then confirm with us through instagram: <br />
+                    <p><strong>Please make a payment and then confirm with us through instagram:</strong> <br />
                         <br/>
                         BOB Account Number:<strong> 200901473</strong> 
                         <br />Or
