@@ -59,8 +59,15 @@
     transform: rotate(2.2deg);
 }
 
-
 .service__content1{
     width: 100%;
     display: flex;
+}
+
+
+@media screen and (max-width: 820px){
+    .service__content1{
+        flex-direction: column;
+        
+    }
 }

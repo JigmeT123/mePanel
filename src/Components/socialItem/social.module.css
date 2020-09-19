@@ -87,3 +87,19 @@
 .card6{
     background-color: #f50;
 }
+
+@media screen and (max-width: 820px){
+    .socialItem{
+        width: 60%;
+        margin: 10px auto;
+        
+    }
+}
+@media screen and (max-width: 415px){
+    .socialItem{
+        width: 60%;
+        margin: 10px auto;
+        font-size: 11px;
+        height: 750px;
+    }
+}
