@@ -7,15 +7,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import {useTheme} from '@material-ui/core/styles';
 import styles from './payment.module.css';
-import {
-    FormControl,
-    Input,
-    InputLabel,
-    Select,
-    MenuItem,
-    Button,
-    FormHelperText
-} from '@material-ui/core';
+import {Button} from '@material-ui/core';
 import {Link} from 'react-router-dom';
 const Payment = () => {
     const [firstName, setFirstName] = useState("");
@@ -35,13 +27,52 @@ const Payment = () => {
         "Amazon Prime Video",
         "Spotify"
     ])
+     const [instaList, setInstaList] = useState([
+        "Premium Followers",
+        "Likes",
+        "Video view/IGTV Views",
+    ])
+    const [facebookList, setFacebookList] = useState([
+        "Page Likes",
+        "Post Likes",
+        "Video view",
+    ])
+    const [youtubeList, setYoutubeList] = useState([
+        "Subscriber",
+        "RAV* Video Views",
+        "Video likes",
+    ])
+    const [tiktokList, setTiktokList] = useState([
+        "premium fans",
+        "Hearts",
+        "Real view",
+    ])
+    const [twitterList, setTwitterList] = useState([
+        "Followers",
+        "Likes",
+        "Video view",
+    ])
+    const [soundList, setSoundList] = useState([
+        "Sond Plays",
+        "Song Likes",
+        "Songs Downloads",
+    ])
+    const [netflixPremiumList, setNetflixPremiumList] = useState([
+        "4 screen one month subscription",
+       
+    ]);
+    const [amazonPrimeVideo, setAmazonPrimeVideo] = useState([
+        "one month subscription",
+       
+    ])
     const handleClick = e => {
         e.preventDefault();
         window.open(
-            `mailto:${email}?subject=MakingOrder&body=Name: ${secondName}|| Service: ${categories}|| Type: ${type}|| Count: ${type} ${count}|| Username: ${firstName}|| Phone Number: ${phoneNumber}`
+            `mailto:${email}?subject=MakingOrder&body=Name: ${secondName}|| Service: ${categories}|| Type: ${type}|| Count:${count} ${type}|| Username: ${firstName}|| Phone Number: ${phoneNumber}`
         );
     }
     const [open, setOpen] = useState(false);
+    const [check, setCheck] = useState(false)
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -57,15 +88,16 @@ const Payment = () => {
     }
 
     const [type, setType] = useState("Followers");
-    const [listType, setListType] = useState([
-        "Followers",
-        "Likes",
-        "Premium accounts",
-        "subscriber",
-        "Views",
-        "SoundCloud plays",
-        "Soundcloud Downloads"
-    ])
+   
+    const handleCheck = e => {
+        if(check){
+            setCheck(false)
+        }else{
+            setCheck(true);
+        }
+       
+        
+    }
     const [count, setCount] = useState("");
 
     const changeHandler = (e) => {
@@ -103,9 +135,9 @@ const Payment = () => {
                         placeholder="Enter Your Name"/>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
-                <div className={styles.formStyle} onChange={changeHandler}>
+                <div className={styles.formStyle} >
                     <label for="exampleInputEmail1">Type:</label>
-                    <select class="form-control form-control-lg">
+                    <select class="form-control form-control-lg" onChange={changeHandler}>
                         {list.map((category) => (<option value={category}>{category}</option>))}
                     </select>
                 </div>
@@ -113,7 +145,10 @@ const Payment = () => {
                 <div className={styles.formStyle}>
                     <label for="exampleInputEmail1">Services:</label>
                     <select class="form-control form-control-lg" onChange={changeHandler1}>
-                        {listType.map((category) => (<option value={category}>{category}</option>))}
+                        {/* {instaList.map((category) => (<option value={category}>{category}</option>))} */}
+                        {
+                           (categories === "Instagram" && instaList.map((category) => (<option value={category}>{category}</option>))) || (categories==="Facebook" && facebookList.map((category) => (<option value={category}>{category}</option>))) || (categories === "Youtube" && youtubeList.map((category) => (<option value={category}>{category}</option>))) || (categories === "Tiktok" && tiktokList.map((category) => (<option value={category}>{category}</option>))) || (categories==="Twitter" && twitterList.map((category) => (<option value={category}>{category}</option>))) || (categories === "SoundCloud" && soundList.map((category) => (<option value={category}>{category}</option>))) || (categories === "Netflix" && netflixPremiumList.map((category) => (<option value={category}>{category}</option>))) || (categories === "Amazon Prime Video" && amazonPrimeVideo.map((category) => (<option value={category}>{category}</option>))) || (categories === "Spotify" && amazonPrimeVideo.map((category) => (<option value={category}>{category}</option>)))
+                        }
                     </select>
                 </div>
 
@@ -151,13 +186,13 @@ const Payment = () => {
                         We will never share your personal details.</small>
                 </div>
                 <div class={styles.formStyle2}>
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" onChange={handleCheck}/>
                     <label class="form-check-label" for="exampleCheck1">I agree to the
                         <Link to='/terms'> terms and condition.</Link>
                     </label>
                 </div>
 
-                <Button className={styles.btn2} onClick={handleClickOpen}>Open</Button>
+                <Button className={styles.btn2} onClick={check && handleClickOpen}>Open</Button>
                 <Dialog
                     fullScreen={fullScreen}
                     open={open}
