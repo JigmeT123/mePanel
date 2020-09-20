@@ -54,6 +54,7 @@
 }
 .extra{
     display: none;
+ 
 }
 
 @media screen and (max-width: 680px){
@@ -63,6 +64,8 @@
     .extra{
         display: block;
         margin-right: 50px;
+    
+        background-color: red;
     }
     .header{
         padding-right: 0;

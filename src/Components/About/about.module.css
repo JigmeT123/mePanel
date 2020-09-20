@@ -19,6 +19,7 @@
     color: white;
     justify-content: center;
     align-items: center;
+    
     flex-direction: column;
 }
 .home__info > h1 {

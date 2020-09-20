@@ -18,7 +18,6 @@ function App() {
     const backDropHandler = () => {
         setToggle(false)
     }
-    let sideDrawer;
     let backdrop;
 
     if(toggle){
