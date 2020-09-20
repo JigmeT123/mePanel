@@ -14,10 +14,22 @@
 .footer2 > a{
     color: white;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .footer2 > a:hover{
     color: lightgray;
     text-decoration: none;
+}
+
+@media screen and (max-width: 440px) {
+    .footer1 > h5, .footer1 > p{
+       font-size: 12px !important;
+    }
+    .footer2 > a{
+        font-size: 12px;
+    }
 }
 
 

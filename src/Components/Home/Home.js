@@ -9,6 +9,12 @@ import { Link } from 'react-router-dom';
 
 
 const Home = () => {
+    const email = "jpdorji007@gmail.com";
+    const handleMailclick = e => {
+        window.open(
+            `mailto:${email}?subject=enquiries`
+        );
+    }
     let items = [
         {
             name: "Tshering Dorji",
@@ -51,9 +57,9 @@ const Home = () => {
                         is the use of social media platforms such as Instagram, Facebook, Twitter,
                         Youtube and many more to promote yourself or your company. If you are looking
                         for a way to
-                        <span>boost</span>
+                        <span> boost </span>
                         your online presence, then your best choice is
-                        <span>BhutanMePanel</span>
+                        <span> BhutanMePanel </span>
                         where we offer services to help you boost your online presence across all social
                         media platforms at the cheapest prices.</p>
                 </div>
@@ -65,15 +71,11 @@ const Home = () => {
                     {items.map((item, i) => <Item key={i} item={item}/>)}
                 </Carousel>
             </div>
-            <div className={styles.home__partner}>
-                <PartnerCompany/>
-                <PartnerCompany/>
-                <PartnerCompany/>
-            </div>
+           
 
             <div className={styles.home_contact}>
                 <h1>READY TO GROW YOUR DIGITAL PRESENCE?</h1>
-                <Button>Contact Us</Button>
+                <Button onClick={handleMailclick}>Contact Us</Button>
             </div>
            
         </div>

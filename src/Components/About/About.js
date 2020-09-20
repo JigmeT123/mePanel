@@ -36,9 +36,9 @@ const About = () => {
 
             </div>
             <div className={styles.about__quote}>
-                <img src={Buddha} alt="quote image" />
+                <img src={Buddha} alt="quoteimage" />
                 <Card className={styles.quote}>
-                    <CardContent>
+                    <CardContent className={styles.later}>
                     “We have technology, finally, that for the first time in human history allows people to really maintain rich connections with much larger numbers of people.” – Pierre Omidyar
                     </CardContent>
                 </Card>

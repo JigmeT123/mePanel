@@ -1,10 +1,11 @@
 .terms{
     position: relative;
-    height: 3500px;
+    height: 3100px;
     display: flex;
     padding-top: 120px;
     padding-left: 50px;
     padding-right: 50px;
     justify-content: center;
     align-content: center;
+    overflow-y: scroll;
 }
