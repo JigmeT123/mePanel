@@ -20,6 +20,8 @@ form{
 .btn {
     background-color: red !important;
     color: white !important; 
+    padding: 10px 20px !important;
+    outline: none !important;
 }
 .boxInfo{
     background-color: whitesmoke;
@@ -31,4 +33,11 @@ form{
    margin-bottom: 20px;
    width: 100%;
     
+}
+.btn1{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+    outline: none !important;
+    padding: 10px 20px !important;
 }

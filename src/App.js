@@ -5,7 +5,7 @@ import About from './Components/About/About';
 import Services from './Components/Services/Service';
 import Footer from './Components/footer/Footer';
 import Payment from './Components/Payment/payment';
-
+import Terms from './Components/terms/Terms';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 function App() {
     return (
@@ -17,6 +17,7 @@ function App() {
                     <Route path="/about" component={About}/>
                     <Route path="/services" component={Services}/>
                     <Route path="/payment" component={Payment} />
+                    <Route path="/terms" component={Terms} />
                 </Switch>
                 <Footer />
 
