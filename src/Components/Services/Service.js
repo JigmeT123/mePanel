@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './service.module.css';
 import SocialItem from '../socialItem/SocialItem';
-import {Link} from 'react-router-dom';
-import {Button} from '@material-ui/core';
 import {Instagram, Facebook, YouTube, Twitter} from '@material-ui/icons';
 import {SiTiktok, ImSoundcloud, SiNetflix, AiFillAmazonCircle, FaSpotify} from 'react-icons/all';
 import PremiumItem from '../premium/PremiumItem';

@@ -62,7 +62,7 @@
 
 
 .about__content{
-    height: 500px;
+    height: 700px;
     display: grid;
     grid-template-columns: 55% auto;
     place-items: center;

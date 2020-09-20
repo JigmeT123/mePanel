@@ -3,7 +3,6 @@ import styles from './home.module.css'
 import {Button} from '@material-ui/core';
 import Carousel from 'react-material-ui-carousel';
 import Item from '../TestomonialItem/Item';
-import PartnerCompany from '../partnerCompany/PartnerCompany';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
