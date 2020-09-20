@@ -7,6 +7,7 @@
     padding: 0 60px;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 100;
     background-color: white;
     border-bottom: 2px solid rgba(46, 46, 46, 0.609) ;
@@ -50,4 +51,22 @@
     width: 200px;
     object-fit: contain;
     transition: all 0.5 ease-in-out;
+}
+.extra{
+    display: none;
+}
+
+@media screen and (max-width: 680px){
+    .header__navigation{
+        display: none;
+    }
+    .extra{
+        display: block;
+        margin-right: 50px;
+    }
+    .header{
+        padding-right: 0;
+        padding-left: 45px;
+    }
+    
 }

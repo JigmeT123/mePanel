@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react'
 import styles from './header.module.css';
 import logo from '../../assets/MP.svg';
 import {Link} from 'react-router-dom';
-
-const Header = () => {
+import ToggleBtn from '../sideDrawer/DrawerToggle';
+const Header = ({drawerClick}) => {
     const [handleShow, setHandleShow] = useState(false);
     useEffect(()=>{
         window.addEventListener('scroll', ()=> {
@@ -19,8 +19,11 @@ const Header = () => {
     }, [])
     return (
         <div className={`${styles.header} ${handleShow && styles.header__scrolled}`}>
+            <div className={styles.extra}>
+            <ToggleBtn click={drawerClick}/>
+            </div>
             <Link to="/">
-            <img className={styles.header__logo} src={logo} alt="Company Logo" />
+            <img className={styles.header__logo} src={logo} alt="CompanyLogo" />
             </Link>
             
             <nav className={styles.header__navigation}>
