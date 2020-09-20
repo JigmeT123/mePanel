@@ -1,12 +1,12 @@
 .payment{
-    height: 930px;
+    height: 900px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 form{
     width: 80%;
-    height: 500px;
+    height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,14 +14,29 @@ form{
 }
 .formStyle{
     width: 100% !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 10px !important;
 }
 
+.formStyle > input {
+    padding: 15px !important;
+}
+.formStyle2 {
+    margin-bottom: 20px;
+}
+.formStyle2 > input {
+    width: 20px;
+}
 .btn {
     background-color: red !important;
     color: white !important; 
     padding: 10px 20px !important;
     outline: none !important;
+}
+.btn2{
+    background-color: red !important;
+    color: white !important; 
+    outline: none !important; 
+    padding: 10px 30px !important;
 }
 .boxInfo{
     background-color: whitesmoke;

@@ -22,7 +22,8 @@ const Payment = () => {
     const [secondName, setSecondName] = useState("");
     const [categories, setCategories] = useState("Instagram");
     const [phoneNumber, setPhoneNumber] = useState("");
-    const email = "jpdorji007@gmail.com"
+    // const email = "jpdorji007@gmail.com"
+    const email = "jigmetashi02@gmail.com"
     const [list, setList] = useState([
         "Instagram",
         "Facebook",
@@ -89,68 +90,74 @@ const Payment = () => {
     };
     return (
         <div className={styles.payment}>
-            <form >
-
-                <FormControl className={styles.formStyle}>
-                    <InputLabel htmlFor="my-input">Name</InputLabel>
-                    <Input
+            <form>
+                <div className={styles.formStyle}>
+                    <label for="exampleInputEmail1">Name</label>
+                    <input
                         value={secondName}
                         onChange={changeHandleSecondName}
                         type="text"
-                        id="my-input"
-                        aria-describedby="my-helper-text"/>
-                </FormControl>
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter Your Name"/>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div className={styles.formStyle} onChange={changeHandler}>
+                    <label for="exampleInputEmail1">Type:</label>
+                    <select class="form-control form-control-lg">
+                        {list.map((category) => (<option value={category}>{category}</option>))}
+                    </select>
+                </div>
 
-                <FormControl className={styles.formStyle}>
-                    <Select variant="outlined" value={categories} onChange={changeHandler}>
-                        {list.map((category) => (<MenuItem value={category}>{category}</MenuItem>))}
-                    </Select>
-                </FormControl>
+                <div className={styles.formStyle}>
+                    <label for="exampleInputEmail1">Services:</label>
+                    <select class="form-control form-control-lg" onChange={changeHandler1}>
+                        {listType.map((category) => (<option value={category}>{category}</option>))}
+                    </select>
+                </div>
 
-                <FormControl className={styles.formStyle}>
-                    <Select variant="outlined" value={type} onChange={changeHandler1}>
-                        {listType.map((category) => (<MenuItem value={category}>{category}</MenuItem>))}
-                    </Select>
-                </FormControl>
-
-                <FormControl className={styles.formStyle}>
-                    <InputLabel htmlFor="my-input">
-                        How many {type}</InputLabel>
-                    <Input
+                <div className={styles.formStyle}>
+                    <label for="exampleInputPassword1">How Many {type}</label>
+                    <input
                         value={count}
                         onChange={changeCount}
                         type="text"
-                        id="my-input"
-                        aria-describedby="my-helper-text"/>
-                </FormControl>
-                <FormControl className={styles.formStyle}>
-                    <InputLabel htmlFor="my-input">User Name</InputLabel>
-                    <Input
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        placeholder="count"/>
+                </div>
+                <div className={styles.formStyle}>
+                    <label for="exampleInputPassword1">User Name</label>
+                    <input
                         value={firstName}
                         onChange={changeHandleFirstName}
                         type="text"
-                        id="my-input"
-                        aria-describedby="my-helper-text"/>
-                    <FormHelperText id="my-helper-text">
-                        Please make sure to give a correct username and make your account public.</FormHelperText>
-                </FormControl>
-                <FormControl className={styles.formStyle}>
-                    <InputLabel htmlFor="my-input">Phone Number</InputLabel>
-                    <Input
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        placeholder="User name"/>
+                    <small id="emailHelp" class="form-text text-muted">Please make sure to give a correct username and make your account public.</small>
+                </div>
+                <div className={styles.formStyle}>
+                    <label for="exampleInputPassword1">Phone Number</label>
+                    <input
                         value={phoneNumber}
                         onChange={changePhoneNumber}
                         type="text"
-                        id="my-input"
-                        aria-describedby="my-helper-text"/>
-                    <FormHelperText id="my-helper-text">
-                        We will never share your personal details</FormHelperText>
-                </FormControl>
-                <p>By clicking on the button below you agree to our
-                    <Link to='/terms'> terms and condition.</Link>
-                </p>
-                <Button className={styles.btn} onClick={handleClickOpen}>
-                    Open
-                </Button>
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        placeholder="+975"/>
+                    <small id="emailHelp" class="form-text text-muted">
+                        We will never share your personal details.</small>
+                </div>
+                <div class={styles.formStyle2}>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+                    <label class="form-check-label" for="exampleCheck1">I agree to the
+                        <Link to='/terms'> terms and condition.</Link>
+                    </label>
+                </div>
+
+                <Button className={styles.btn2} onClick={handleClickOpen}>Open</Button>
                 <Dialog
                     fullScreen={fullScreen}
                     open={open}
@@ -159,17 +166,20 @@ const Payment = () => {
                     <DialogTitle id="responsive-dialog-title">{"IMPORTANT!"}</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            Please make a payment through <strong>MBOB</strong> and then click the order now bottom to send us the
-                            mail:
+                            Please make a payment through
+                            <strong> MBOB </strong>
+                            and then click the order now button to send us the mail:
                             <br/><br/>
                             BOB Account Number:
-                            <strong> 200901473</strong>
-                            <br/><br/>
-                            Or State Bank of India:
-                            <strong> 38924158570</strong><br/><br/>
-                            <strong>IFSC CODE</strong>
-                            <br/><br/>
-                            <strong>SBIN0001269</strong>
+                            <strong>
+                                200901473</strong>
+                                <p>Steps to add funds through Bank of Bhutan</p>
+                                <p>1.<strong>200901473</strong> 👈 copy this account number </p>
+                                <p>2.Paste it on your MBoB/Mpay/eTeeru and transfer amount.</p>
+                                
+                                <p>3. After the payment Click on the <strong>Order Now Button</strong></p>
+                                <p>4.You will be redirected to your gmail , send the mail without altering the infromation.</p>
+                                <p>5.If you don't have gmail/email app in your phone , just confirm with us through instagram after paying the money</p>
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>
@@ -187,4 +197,4 @@ const Payment = () => {
     )
 }
 
-export default Payment
+export default Payment 
