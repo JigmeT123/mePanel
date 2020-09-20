@@ -142,7 +142,7 @@
 }
 .about__quote{
     flex-direction: column;
-    height: 550px;
+    height: 450px;
 
 }
 .about__quote > img {
