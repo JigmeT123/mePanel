@@ -14,6 +14,7 @@ const Payment = () => {
     const [secondName, setSecondName] = useState("");
     const [categories, setCategories] = useState("Instagram");
     const [phoneNumber, setPhoneNumber] = useState("");
+    const [money, setMoney] = useState("");
     const email = "jpdorji007@gmail.com"
     const [list, setList] = useState([
         "Instagram",
@@ -26,6 +27,9 @@ const Payment = () => {
         "Amazon Prime Video",
         "Spotify"
     ])
+    const moneyHandler = (e) => {
+        setMoney(e.target.value);
+    }
      const [instaList, setInstaList] = useState([
         "Premium Followers",
         "Likes",
@@ -67,7 +71,7 @@ const Payment = () => {
     const handleClick = e => {
         e.preventDefault();
         window.open(
-            `mailto:${email}?subject=MakingOrder&body=Name: ${secondName}|| Service: ${categories}|| Type: ${type}|| Count:${count} ${type}|| Username: ${firstName}|| Phone Number: ${phoneNumber}`
+            `mailto:${email}?subject=MakingOrder&body=Name: ${secondName}|| Service: ${categories}|| Type: ${type}|| Count:${count} ${type}|| Username: ${firstName}|| Phone Number: ${phoneNumber}|| Amount: ${money}`
         );
     }
     const [open, setOpen] = useState(false);
@@ -165,15 +169,15 @@ const Payment = () => {
                         placeholder="count"/>
                 </div>
                 <div className={styles.formStyle}>
-                    <label for="exampleInputPassword1">User Name</label>
+                    <label for="exampleInputPassword1">{( (categories === "Netflix")&& (`email address`) || (categories === "Amazon Prime Video"&& (`email address`)) || (categories === "Spotify") && (`email address`)) || (categories === "SoundCloud" && `Sound links`) || `User Name`}</label>
                     <input
                         value={firstName}
                         onChange={changeHandleFirstName}
                         type="text"
                         class="form-control"
                         id="exampleInputPassword1"
-                        placeholder="User name"/>
-                    <small id="emailHelp" class="form-text text-muted">Please make sure to give a correct username and make your account public.</small>
+                        placeholder={( (categories === "Netflix")&& (`email address`) || (categories === "Amazon Prime Video"&& (`email address`)) || (categories === "Spotify") && (`email address`)) || (categories === "SoundCloud" && `Sound links`) || `User Name`}/>
+                    <small id="emailHelp" class="form-text text-muted">Please make sure to give a correct {( (categories === "Netflix")&& (`email address`) || (categories === "Amazon Prime Video"&& (`email address`)) || (categories === "Spotify") && (`email address`)) || (categories === "SoundCloud" && `Sound links`) || `User Name`} and make your account public.</small>
                 </div>
                 <div className={styles.formStyle}>
                     <label for="exampleInputPassword1">Phone Number</label>
@@ -184,6 +188,18 @@ const Payment = () => {
                         class="form-control"
                         id="exampleInputPassword1"
                         placeholder="+975"/>
+                    <small id="emailHelp" class="form-text text-muted">
+                        We will never share your personal details.</small>
+                </div>
+                <div className={styles.formStyle}>
+                    <label for="exampleInputPassword1">Money transferred</label>
+                    <input
+                        value={money}
+                        onChange={moneyHandler}
+                        type="text"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        placeholder="/-"/>
                     <small id="emailHelp" class="form-text text-muted">
                         We will never share your personal details.</small>
                 </div>
@@ -213,10 +229,10 @@ const Payment = () => {
                                 <p>Steps to add funds through Bank of Bhutan</p>
                                 <p>1.<strong>200901473</strong> 👈 copy this account number </p>
                                 <p>2.Paste it on your MBoB/Mpay/eTeeru and transfer amount.</p>
-                                
-                                <p>3. After the payment Click on the <strong>Order Now Button</strong></p>
-                                <p>4.You will be redirected to your gmail , send the mail without altering the infromation.</p>
-                                <p>5.If you don't have gmail/email app in your phone , just confirm with us through instagram after paying the money</p>
+                                <p>3. Go to your Mbob/Mpay/eTeeru app to transfer the money and</p>
+                                <p>4.After the payment Click on the <strong>Order Now Button</strong></p>
+                                <p>5.You will be redirected to your gmail , send the mail without altering the infromation.</p>
+                                <p>6.If you don't have gmail/email app in your phone , just confirm with us through instagram after paying the money</p>
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>
