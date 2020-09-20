@@ -22,7 +22,7 @@ const Payment = () => {
     const [secondName, setSecondName] = useState("");
     const [categories, setCategories] = useState("Instagram");
     const [phoneNumber, setPhoneNumber] = useState("");
-    const email = "jigmetashi02@gmail.com"
+    const email = "jpdorji007@gmail.com"
     const [list, setList] = useState([
         "Instagram",
         "Facebook",
