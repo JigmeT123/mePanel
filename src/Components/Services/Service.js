@@ -29,7 +29,7 @@ const Service = () => {
                 price: " Nu.1790/-",
                 desc: '    4000 followers'
             }, {
-                price: 'Nu.1790/-',
+                price: 'Nu.2270/-',
                 desc: '    5000 followers'
             }
         ],
