@@ -213,23 +213,23 @@ const Service = () => {
         title3: "YouTube video likes",
         data1: [
             {
-                price: 'Nu.199/-',
-                desc: "    500 subscribers"
+                price: 'Nu.350/-',
+                desc: "    100 subscribers"
             }, {
-                price: "Nu.299/-",
-                desc: "    1000 subscribers"
+                price: "Nu.550/-",
+                desc: "    200 subscribers"
             }, {
-                price: "Nu.399/-",
-                desc: "    2000 subscribers"
+                price: "Nu.650/-",
+                desc: "    300 subscribers"
             }, {
-                price: "Nu.599/-",
-                desc: '    3000 subscribers'
+                price: "Nu.800/-",
+                desc: '    400 subscribers'
             }, {
-                price: " Nu.799/-",
-                desc: '    4000 subscribers'
+                price: " Nu.970/-",
+                desc: '    500 subscribers'
             }, {
-                price: 'Nu.1199/-',
-                desc: '    5000 subscribers'
+                price: 'Nu.2100/-',
+                desc: '    1000 subscribers'
             }
         ],
         data3: [

@@ -137,7 +137,9 @@ const Payment = () => {
                 </div>
                 <div className={styles.formStyle} >
                     <label for="exampleInputEmail1">Type:</label>
+
                     <select class="form-control form-control-lg" onChange={changeHandler}>
+                        <option>Categories</option>
                         {list.map((category) => (<option value={category}>{category}</option>))}
                     </select>
                 </div>
@@ -145,7 +147,8 @@ const Payment = () => {
                 <div className={styles.formStyle}>
                     <label for="exampleInputEmail1">Services:</label>
                     <select class="form-control form-control-lg" onChange={changeHandler1}>
-                        {/* {instaList.map((category) => (<option value={category}>{category}</option>))} */}
+                    <option>Services</option>
+                        
                         {
                            (categories === "Instagram" && instaList.map((category) => (<option value={category}>{category}</option>))) || (categories==="Facebook" && facebookList.map((category) => (<option value={category}>{category}</option>))) || (categories === "Youtube" && youtubeList.map((category) => (<option value={category}>{category}</option>))) || (categories === "Tiktok" && tiktokList.map((category) => (<option value={category}>{category}</option>))) || (categories==="Twitter" && twitterList.map((category) => (<option value={category}>{category}</option>))) || (categories === "SoundCloud" && soundList.map((category) => (<option value={category}>{category}</option>))) || (categories === "Netflix" && netflixPremiumList.map((category) => (<option value={category}>{category}</option>))) || (categories === "Amazon Prime Video" && amazonPrimeVideo.map((category) => (<option value={category}>{category}</option>))) || (categories === "Spotify" && amazonPrimeVideo.map((category) => (<option value={category}>{category}</option>)))
                         }
